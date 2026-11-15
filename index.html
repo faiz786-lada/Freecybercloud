@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>FreeCyberCloud — Free Private Cloud Storage Online</title>
+
+<!-- ============ SEO ============ -->
+<meta name="description" content="FreeCyberCloud is 100% free, private cloud storage in your browser. Upload files and photos in bulk, organize them in folders and access them from anywhere. No payment, no subscription.">
+<meta name="keywords" content="freecybercloud, free cyber cloud, free cloud storage, online file storage, upload files online, private file storage, bulk image upload, online file manager">
+<meta name="author" content="FreeCyberCloud">
+<meta name="application-name" content="FreeCyberCloud">
+<meta name="apple-mobile-web-app-title" content="FreeCyberCloud">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="theme-color" content="#00d9ff">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://freecybercloud.netlify.app/">
+
+<!-- Google Search Console verification:
+     Add your NEW token for https://freecybercloud.netlify.app here
+     (Search Console -> Add property -> URL prefix -> HTML tag), e.g.
+     <meta name="google-site-verification" content="YOUR_NEW_TOKEN" /> -->
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreeCyberCloud">
+<meta property="og:title" content="FreeCyberCloud — Free Private Cloud Storage Online">
+<meta property="og:description" content="100% free, private cloud storage. Upload files and photos in bulk, organize them into folders and reach them from anywhere.">
+<meta property="og:url" content="https://freecybercloud.netlify.app/">
+<meta property="og:image" content="https://freecybercloud.netlify.app/og-image.png">
+<meta property="og:image:alt" content="FreeCyberCloud — free private cloud storage">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FreeCyberCloud — Free Private Cloud Storage Online">
+<meta name="twitter:description" content="100% free, private cloud storage. Upload files and photos in bulk, organize them into folders and reach them from anywhere.">
+<meta name="twitter:image" content="https://freecybercloud.netlify.app/og-image.png">
+<meta name="twitter:image:alt" content="FreeCyberCloud — free private cloud storage">
+
+<!-- ============ FAVICON / ICONS ============ -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://freecybercloud.netlify.app/#website",
+      "url": "https://freecybercloud.netlify.app/",
+      "name": "FreeCyberCloud",
+      "alternateName": [
+        "Free Cyber Cloud",
+        "freecybercloud"
+      ],
+      "description": "Free, private cloud storage in your browser.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://freecybercloud.netlify.app/#app",
+      "name": "FreeCyberCloud",
+      "url": "https://freecybercloud.netlify.app/",
+      "description": "100% free, private cloud storage. Upload files and photos in bulk, organize them into folders, and reach them from anywhere.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "image": "https://freecybercloud.netlify.app/og-image.png",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is FreeCyberCloud really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. FreeCyberCloud is completely free — there is no payment, no subscription and no paywall. Create an account and start uploading right away."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I upload?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can upload multiple files at once, up to 5 MB per file. Your dashboard shows how much storage you are using."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my files private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Each account can only read and write its own files; security rules on the database block access to other users' data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which devices can I use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FreeCyberCloud works in any modern browser on phones, tablets and computers. Sign in on any device to reach your files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to install anything?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Everything runs in your browser — just sign in at freecybercloud.netlify.app."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<canvas id="ambient"></canvas>
+
+<!-- ============ AUTH SCREEN ============ -->
+<div id="auth-screen">
+  <div class="auth-card">
+    <div class="brand">
+      <div class="brand-mark">C</div>
+      <div class="brand-name">FreeCyberCloud</div>
+    </div>
+
+    <div id="login-form">
+      <div class="auth-title">Welcome back</div>
+      <div class="auth-sub">Sign in to reach your files from anywhere.</div>
+      <div class="auth-error" id="login-error"></div>
+      <div class="auth-note" id="login-note"></div>
+      <div class="field"><label>Email</label><input type="email" id="login-email" placeholder="you@example.com"></div>
+      <div class="field"><label>Password</label><input type="password" id="login-password" placeholder="••••••••"></div>
+      <button class="btn btn-primary" onclick="Auth.login()">Sign in</button>
+      <div class="auth-links">
+        <button onclick="Auth.resetPassword()">Forgot password?</button>
+        <span></span>
+      </div>
+      <div class="auth-switch">New here? <button onclick="Auth.showSignup()">Create an account</button></div>
+    </div>
+
+    <div id="signup-form" style="display:none">
+      <div class="auth-title">Create your space</div>
+      <div class="auth-sub">Free, private storage in the cloud. No payment needed.</div>
+      <div class="auth-error" id="signup-error"></div>
+      <div class="field"><label>Display name</label><input type="text" id="signup-name" placeholder="Ada Lovelace"></div>
+      <div class="field"><label>Email</label><input type="email" id="signup-email" placeholder="you@example.com"></div>
+      <div class="field"><label>Password</label><input type="password" id="signup-password" placeholder="At least 6 characters"></div>
+      <button class="btn btn-primary" onclick="Auth.signup()">Create account</button>
+      <div class="auth-switch">Already have an account? <button onclick="Auth.showLogin()">Sign in</button></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============ PUBLIC LANDING CONTENT (crawlable; hidden after sign-in) ============ -->
+<main id="seo-landing">
+  <h1>FreeCyberCloud — free private cloud storage online</h1>
+  <p class="lead">Upload photos, documents and files in bulk, organize them into folders and open them from any device. FreeCyberCloud is completely free — no payment, no subscription.</p>
+
+  <h2>Why people use FreeCyberCloud</h2>
+  <div class="seo-features">
+    <div class="seo-feature"><h3>100% free</h3><p>No paywall and no subscription. Create an account and start uploading immediately.</p></div>
+    <div class="seo-feature"><h3>Private by default</h3><p>Your files live in your own account. Nobody else can read or change them.</p></div>
+    <div class="seo-feature"><h3>Bulk uploads</h3><p>Drag and drop many files and photos at once and watch live progress.</p></div>
+    <div class="seo-feature"><h3>Folders &amp; favorites</h3><p>Group files into folders, star the important ones and search by name in seconds.</p></div>
+    <div class="seo-feature"><h3>Realtime sync</h3><p>Changes appear instantly on every device where you are signed in.</p></div>
+    <div class="seo-feature"><h3>Trash &amp; restore</h3><p>Deleted something by mistake? Restore it from the trash in one click.</p></div>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="seo-faq">
+    <details><summary>Is FreeCyberCloud really free?</summary><p>Yes. FreeCyberCloud is completely free — there is no payment, no subscription and no paywall. Create an account and start uploading right away.</p></details>
+    <details><summary>How much can I upload?</summary><p>You can upload multiple files at once, up to 5 MB per file. Your dashboard shows how much storage you are using.</p></details>
+    <details><summary>Are my files private?</summary><p>Yes. Each account can only read and write its own files; security rules on the database block access to other users' data.</p></details>
+    <details><summary>Which devices can I use?</summary><p>FreeCyberCloud works in any modern browser on phones, tablets and computers. Sign in on any device to reach your files.</p></details>
+    <details><summary>Do I need to install anything?</summary><p>No. Everything runs in your browser — just sign in at freecybercloud.netlify.app.</p></details>
+  </div>
+
+  <div class="seo-footer">
+    <a href="/privacy.html">Privacy Policy</a>·<a href="/terms.html">Terms of Use</a>
+    <p style="margin-top:10px">© 2026 FreeCyberCloud · freecybercloud.netlify.app</p>
+  </div>
+</main>
+
+<noscript><p style="position:relative;z-index:2;padding:20px;text-align:center">FreeCyberCloud needs JavaScript enabled to sign in and manage your files.</p></noscript>
+
+<!-- ============ APP ============ -->
+<div id="app">
+  <div class="shell">
+    <div class="sidebar-scrim" id="scrim" onclick="UI.closeSidebar()"></div>
+    <aside id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">C</div>
+        <div class="brand-name">FreeCyberCloud</div>
+      </div>
+      <ul class="sidebar-nav">
+        <li><button class="nav-link active" data-page="dashboard" onclick="UI.goTo('dashboard')"><span class="ic">▣</span> Dashboard</button></li>
+        <li><button class="nav-link" data-page="uploads" onclick="UI.goTo('uploads')"><span class="ic">⬆</span> All Files <span class="nav-count" id="count-all">0</span></button></li>
+        <li><button class="nav-link" data-page="folders" onclick="UI.goTo('folders')"><span class="ic">▢</span> Folders</button></li>
+        <li><button class="nav-link" data-page="favorites" onclick="UI.goTo('favorites')"><span class="ic">★</span> Favorites</button></li>
+        <li><button class="nav-link" data-page="trash" onclick="UI.goTo('trash')"><span class="ic">🗑</span> Trash <span class="nav-count" id="count-trash">0</span></button></li>
+        <li><button class="nav-link" data-page="settings" onclick="UI.goTo('settings')"><span class="ic">⚙</span> Settings</button></li>
+      </ul>
+      <div class="storage-widget">
+        <div class="storage-text">Storage used<br><b id="storage-used">0 MB</b> of <b id="storage-total">1 GB</b></div>
+        <div class="bar-track"><div class="bar-fill" id="storage-bar" style="width:0%"></div></div>
+      </div>
+    </aside>
+
+    <main id="main">
+      <div id="topbar">
+        <button id="hamburger" onclick="UI.openSidebar()">☰</button>
+        <div class="search-wrap"><span class="ic">⌕</span><input type="text" id="search-input" placeholder="Search files..." oninput="UI.render()"></div>
+        <div class="topbar-actions">
+          <button class="icon-btn" id="theme-toggle" onclick="UI.toggleTheme()" title="Toggle theme">◐</button>
+          <button class="icon-btn" onclick="document.getElementById('file-input').click()" title="Upload">⬆</button>
+          <div class="avatar" id="user-avatar" onclick="UI.goTo('settings')">U</div>
+        </div>
+      </div>
+
+      <div class="content" id="content"></div>
+    </main>
+  </div>
+</div>
+
+<input type="file" id="file-input" multiple style="display:none" onchange="Files.handleFiles(this.files)">
+
+<!-- Upload progress panel -->
+<div id="upload-panel">
+  <div class="up-head"><span id="up-title">Uploading 0 files</span><button onclick="document.getElementById('upload-panel').style.display='none'">✕</button></div>
+  <div class="up-list" id="up-list"></div>
+</div>
+
+<!-- Preview modal -->
+<div class="overlay" id="preview-overlay">
+  <div class="modal preview-modal" id="preview-content"></div>
+</div>
+
+<!-- Confirm modal -->
+<div class="overlay" id="confirm-overlay">
+  <div class="modal">
+    <h3 id="confirm-title">Are you sure?</h3>
+    <p id="confirm-text"></p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="UI.closeConfirm()">Cancel</button>
+      <button class="btn btn-danger" id="confirm-btn">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<!-- New folder modal -->
+<div class="overlay" id="folder-overlay">
+  <div class="modal">
+    <h3>New folder</h3>
+    <p>Group related files together.</p>
+    <div class="field"><input type="text" id="folder-name-input" placeholder="Folder name"></div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="UI.hide('folder-overlay')">Cancel</button>
+      <button class="btn btn-primary" onclick="Folders.create()">Create</button>
+    </div>
+  </div>
+</div>
+
+<div id="toasts"></div>
+
+<!-- ============ FIREBASE SDK ============ -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>
+<!-- Firebase Storage SDK not used: files are embedded as Base64 directly inside
+     the Realtime Database, so everything runs on the free Spark plan. -->
+
+<!-- ============ APP SCRIPTS (load order matters) ============ -->
+<script src="js/firebase-config.js"></script>
+<script src="js/state.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/data.js"></script>
+<script src="js/files.js"></script>
+<script src="js/folders.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/ambient.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

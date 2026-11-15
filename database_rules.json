@@ -1,0 +1,52 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        // A user can only read/write their own subtree.
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+
+        "files": {
+          "$fileId": {
+            // Files are stored inline as Base64 data URLs, so "url" IS the file content.
+            ".validate": "newData.hasChildren(['name','url','type','size','uploadedAt','favorite','deleted'])",
+            "name": { ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length < 500" },
+            // 7,000,000 chars covers a ~5MB file after Base64 inflation (~33%),
+            // matching MAX_FILE_SIZE in js/files.js. Change both together.
+            "url": { ".validate": "newData.isString() && newData.val().length < 7000000" },
+            "type": { ".validate": "newData.isString()" },
+            "size": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() < 5242880" },
+            "uploadedAt": { ".validate": "newData.isNumber()" },
+            "folder": { ".validate": "newData.val() == null || newData.isString()" },
+            "favorite": { ".validate": "newData.isBoolean()" },
+            "deleted": { ".validate": "newData.isBoolean()" },
+            "tags": { ".validate": "newData.val() == null || newData.hasChildren() || newData.val() === true" },
+            "$other": { ".validate": false }
+          }
+        },
+
+        "folders": {
+          "$folderId": {
+            ".validate": "newData.hasChildren(['name','createdAt'])",
+            "name": { ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length < 200" },
+            "createdAt": { ".validate": "newData.isNumber()" },
+            "$other": { ".validate": false }
+          }
+        },
+
+        "settings": {
+          ".validate": "newData.hasChildren()",
+          "theme": { ".validate": "newData.val() === 'dark' || newData.val() === 'light'" },
+          "notifications": { ".validate": "newData.isBoolean()" },
+          "$other": { ".validate": false }
+        }
+      }
+    },
+
+    // Deny everything else by default.
+    "$other": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}
