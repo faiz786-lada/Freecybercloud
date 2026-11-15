@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FreeCyberCloud
 
 100% free private cloud storage (no payment / subscription). Static site: HTML + CSS + JS,
@@ -17,3 +18,6 @@ Firebase Authentication + Firebase **Realtime Database**. Live: https://freecybe
 - Google Search Console → URL-prefix property `https://freecybercloud.netlify.app` add karo →
   verification ka HTML meta tag `index.html` me commented jagah par daalo → Sitemaps me `sitemap.xml` submit karo →
   URL Inspection se homepage par *Request indexing* dabao.
+=======
+# Freecybercloud
+>>>>>>> bab21a86e419b08d9f98e6363160efff4631101b
